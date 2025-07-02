@@ -167,23 +167,30 @@ Desenvolva um agente virtual que possa ajudar usuários a planejar suas viagens,
 Crie um aplicativo que auxilie estudantes a aprender um novo assunto, fornecendo explicações, exemplos e quizzes interativos.
 
 Subquestões:
-  - 7.1) Descreva a aplicação escolhida e os objetivos principais do projeto. Explique a arquitetura do aplicativo, incluindo como o Streamlit, LLM e LangChain são utilizados.
-  - 7.2) Implemente o aplicativo e forneça o código-fonte, junto com instruções para execução.
-  - 7.3) Apresente evidências e exemplos de uso do aplicativo e discuta os resultados obtidos.
+  - 7.1) Descreva a aplicação escolhida e os objetivos principais do projeto. 
+  
+  `Resposta`: O agente desenvolvido é um Real State que ajuda você conhecer melhor bairros que você deseja morar dando dicas de lugares e um breve opnião sobre o bairro.
 
- `Resposta`: O agente desenvolvido é um Real State que ajuda você conhecer melhor bairros que você deseja morar dando dicas de lugares e um breve opnião sobre o bairro. O agente foi criado usando gemini e seguindo a estrutura template, foi criado um template (NeighborhoodTemplate) para buscar informações sobre o bairros e listar os 5 lugares interessantes , nesse template foi utilizado o one shot para dar um exemplo de resposta. Além disso, foi usado o template de mapping para mapear os endereços em coordenadas para serem colocadas no mapa. 
+  - 7.2) Explique a arquitetura do aplicativo, incluindo como o Streamlit, LLM e LangChain são utilizados.
+  
+  `Resposta`: O agente foi criado usando a biblioteca Langchain, o modelo gemini e seguindo a estrutura template, foi criado um template (NeighborhoodTemplate) para buscar informações sobre o bairros e listar os 5 lugares interessantes , nesse template foi utilizado o one shot para dar um exemplo de resposta. Além disso, foi usado o template de mapping para mapear os endereços em coordenadas para serem colocadas no mapa. O streamlit é usado como interface para o agente.
 
-O código está disponível no github: https://github.com/ana-delfino/infnet_gen_ai/tree/main/src 
+  - 7.3) Implemente o aplicativo e forneça o código-fonte, junto com instruções para execução.
 
-Instruções para execução: 
+ `Resposta`: https://github.com/ana-delfino/infnet_gen_ai/tree/main/src
+  Instruções para execução: 
 
-1. Clone o repositório do git
-2. Crie o ambiente virtual, ative e instale os requirements do arquivo requirements.txt
-3. Para executar a aplicação rode o comando abaixo: 
-```
-cd src/
-streamlit run app.py
-```
+  1. Clone o repositório do git
+  2. Crie o ambiente virtual, ative e instale os requirements do arquivo requirements.txt
+  3. Para executar a aplicação rode o comando abaixo: 
+  ```
+  cd src/
+  streamlit run app.py
+  ```
+  
+  - 7.4) Apresente evidências e exemplos de uso do aplicativo e discuta os resultados obtidos.
+
+ `Resposta`: Pelas imagens abaixo é possível ver que o app está funcionando bem, mesmo sem especificar o endereço, o modelo consegue fazer o que foi programado para executar.
 
  Exemplo 1: Bairro Aclimação - Dando endereço específico
 
