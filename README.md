@@ -150,7 +150,6 @@ Aqui temos o readme do projeto e o link este mesmo readme no github: https://git
     Dê exemplos de uso da energia solar nas residências e empresas
     Descreva os benefícios e as limitações da energia solar em comparação com outras fontes de energia.
 
-
 <h3 id="part5"> Projeto Prático com Streamlit, LLM e LangChain</h3>
 
 - Questão 7) Escolha uma aplicação para desenvolver utilizando Streamlit, LLM e LangChain. Crie um aplicativo interativo que demonstre o uso de LLMs para resolver um problema específico.
@@ -175,7 +174,7 @@ Para executar a aplicação rode o comando abaixo:
 
 ```
 cd streamlit/
-streamlit run streamlit/main.py
+streamlit run src/app.py
 ```
 
 ![Métricas do dataset](data/08_reporting/streamlit.png)
