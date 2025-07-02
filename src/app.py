@@ -65,11 +65,9 @@ def initialize_map(center, zoom=10):
     return st.session_state.map
 
 initialize_session_state()
-### Dashboard
-# st.image("icon_house.png", width=20)
 
 
-col1, col2 = st.columns([0.05, 1]) # Ajuste os valores para controlar a largura das colunas
+col1, col2 = st.columns([0.05, 1]) 
 
 with col1:
     st.image("icon_house.png", width=60)
@@ -88,19 +86,7 @@ def get_image_as_base64(file):
 
 img_path = "logo.png"
 
-# st.title("\n Welcome to the Real State Agent App!")
-st.markdown("<br>", unsafe_allow_html=True) # Duas quebras de linha para um espaço maior
-
-
-# if not Path(img_path).is_file():
-#     st.error("Arquivo de imagem não encontrado! Verifique o caminho: " + img_path)
-# else:
-#     img_base64 = get_image_as_base64(img_path)
-#     st.markdown(f"""
-#         <img src="data:image/png;base64,{img_base64}" width="1200" height="100">
-#         """,
-#         unsafe_allow_html=True
-#     )
+st.markdown("<br>", unsafe_allow_html=True) 
 
 points_coordinates = []
 
@@ -115,7 +101,7 @@ with col1:
     box = st.container(height=300, border=True)
     with box:
         container = st.empty()
-        container.header("Neighborhood Information")
+        container.header("Neighborhood information")
 
 if button and request:
     points = agent.get_tips(request)
@@ -132,9 +118,9 @@ if button and request:
             raise ValueError("Coordenadas estão vazias.")
 
         if coordinates.startswith("```json"):
-            coordinates = coordinates.strip("`")  # remove todas as crases
+            coordinates = coordinates.strip("`")   
             lines = coordinates.split("\n")
-            coordinates = "\n".join(lines[1:-1])  # remove a primeira e última linha
+            coordinates = "\n".join(lines[1:-1])  
         if isinstance(coordinates, str):
             coordinates = json.loads(coordinates)
 
@@ -154,7 +140,7 @@ if button and request:
         ]
     
     except KeyError:
-        LOGGER.warning("No coordinates found in the itinerary response.")
+        LOGGER.warning("No coordinates found in the json response.")
     except json.JSONDecodeError as e:
         LOGGER.error(f"Erro ao decodificar JSON: {e}")
     except Exception as e:

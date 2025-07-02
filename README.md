@@ -171,6 +171,8 @@ Subquestões:
   - 7.2) Implemente o aplicativo e forneça o código-fonte, junto com instruções para execução.
   - 7.3) Apresente evidências e exemplos de uso do aplicativo e discuta os resultados obtidos.
 
+ `Resposta`: O agente desenvolvido é um Real State que ajuda você conhecer melhor bairros que você deseja morar dando dicas de lugares e um breve opnião sobre o bairro. O agente foi criado usando gemini e seguindo a estrutura template, foi criado um template (NeighborhoodTemplate) para buscar informações sobre o bairros e listar os 5 lugares interessantes , nesse template foi utilizado o one shot para dar um exemplo de resposta. Além disso, foi usado o template de mapping para mapear os endereços em coordenadas para serem colocadas no mapa. 
+
 O código está disponível no github: https://github.com/ana-delfino/infnet_gen_ai/tree/main/src 
 
 Instruções para execução: 
@@ -182,8 +184,6 @@ Instruções para execução:
 cd src/
 streamlit run app.py
 ```
-
- `Resposta`: O agente desenvolvido é um Real State que ajuda você conhecer melhor bairros que você deseja morar dando dicas de lugares e um breve opnião sobre o bairro
 
  Exemplo 1: Bairro Aclimação - Dando endereço específico
 

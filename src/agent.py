@@ -24,7 +24,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-class TravelTemplate:
+class NeighborhoodTemplate:
     def __init__(self):
         self.system_template = """
         You are a real estate agent who helps customer discover interesting spots near a given addresses they are willing to live.
@@ -117,13 +117,12 @@ class Agent:
         self.google_api_key = google_api_key
         self.model = model
         self.model_provider = model_provider
-        # self.temperature = temperature
         self.logger = logging.getLogger(__name__)
         self.chat_model = init_chat_model(model=self.model,
                                      model_provider = self.model_provider, google_api_key= self.google_api_key )
 
     def get_tips(self, request):
-        travel_prompt = TravelTemplate()
+        travel_prompt = NeighborhoodTemplate()
         coordinates_prompt = MappingTemplate()
         
         parser = LLMChain(
