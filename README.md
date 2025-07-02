@@ -93,6 +93,8 @@ Aqui temos o readme do projeto e o link este mesmo readme no github: https://git
 
 - Questão 3) Baixe o conjunto de dados de notícias disponível em:Folha UOL News Dataset.
 
+ - o Código está disponível no github: https://github.com/ana-delfino/infnet_gen_ai/blob/main/ana_delfino_gen_ai_pd.ipynb
+
   - 3.1) Utilize o modelo 'monilouise/ner_pt_br' para identificar e extrair entidades mencionadas nas notícias.
   
     `Resposta`: O código foi desenvolvido no notebook: ana_delfino_gen_ai_pd.ipynb
@@ -169,12 +171,28 @@ Subquestões:
   - 7.2) Implemente o aplicativo e forneça o código-fonte, junto com instruções para execução.
   - 7.3) Apresente evidências e exemplos de uso do aplicativo e discuta os resultados obtidos.
 
-Implemente um dashboard de monitoramento da operação usando Streamlit.
-Para executar a aplicação rode o comando abaixo: 
+O código está disponível no github: https://github.com/ana-delfino/infnet_gen_ai/tree/main/src 
 
+Instruções para execução: 
+
+1. Clone o repositório do git
+2. Crie o ambiente virtual, ative e instale os requirements do arquivo requirements.txt
+3. Para executar a aplicação rode o comando abaixo: 
 ```
-cd streamlit/
-streamlit run src/app.py
+cd src/
+streamlit run app.py
 ```
 
-![Métricas do dataset](data/08_reporting/streamlit.png)
+ `Resposta`: O agente desenvolvido é um Real State que ajuda você conhecer melhor bairros que você deseja morar dando dicas de lugares e um breve opnião sobre o bairro
+
+ Exemplo 1: Bairro Aclimação - Dando endereço específico
+
+![alt text](src/Captura_aclimacao.png)
+
+Exemplo 2: Cracolandia - Sem dar endereço específico
+
+![alt text](src/Captura_cracolandia.png)
+
+Exemplo 3: Bairro Vila Madalena - Apenas mencionando o bairro.
+
+![alt text](src/Captura_vila_madalena.png)
